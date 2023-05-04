@@ -21,7 +21,7 @@ export async function GET(request) {
       },
     });
     const { haiku, tags } = await fetch(
-      `${request.nextUrl.origin}/api/generateHaiku`
+      `${process.env.DOMAIN}/api/generateHaiku`
     ).then((r) => r.json());
     return NextResponse.json({ haiku, tags, tag });
   } catch (err) {
