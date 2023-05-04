@@ -62,6 +62,7 @@ export default function Form(props) {
           placeholder="Sunflowers"
           size={10}
           maxLength={10}
+          minLength={2}
           value={newTag}
           onChange={handleChange}
           disabled={loading}
