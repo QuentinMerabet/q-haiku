@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Haiku",
-  description: "Write an haiku, together.",
+  title: "Haiku | Write a haiku, together.",
+  description: "Drop a word, get an haiku inspired by the community.",
 };
 
 export default function RootLayout({ children }) {
