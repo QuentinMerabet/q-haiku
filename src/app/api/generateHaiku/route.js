@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Configuration, OpenAIApi } from "openai";
+import prisma from "@/lib/prisma";
 
 export async function GET(request) {
   const configuration = new Configuration({
