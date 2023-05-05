@@ -3,6 +3,7 @@
 import React, { useState, useMemo, useEffect, Suspense } from "react";
 import useSWR from "swr";
 import { useSpring, useTrail, a, config } from "@react-spring/web";
+import Share from "./Share";
 
 export default function HaikuCard(props) {
   const { tags, haiku } = props;
@@ -120,9 +121,10 @@ export default function HaikuCard(props) {
     );
   }, [haikuData, haiku]);
 
-  if (!haikuLoading && !tagsLoading) {
+  if (!haikuLoading && !tagsLoading && haikuData && tagsData) {
     return (
       <a.div className="haiku-card" style={spring}>
+        <Share haiku={haiku || haikuData?.haiku.text} />
         {Haiku}
         {Tags}
       </a.div>
