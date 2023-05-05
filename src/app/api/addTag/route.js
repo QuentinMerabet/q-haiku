@@ -36,9 +36,9 @@ async function generateHaiku() {
   const openai = new OpenAIApi(configuration);
 
   // Get the last 5 tags and format them for the prompt
-  const { tags } = await fetch(`${domain}/api/getLastTags`).then((r) =>
-    r.json()
-  );
+  const { tags } = await fetch(`${domain}/api/getLastTags`, {
+    cache: "no-store",
+  }).then((r) => r.json());
   const promptTags = tags.map((tag) => `${tag.name}`).join(", ");
 
   // Generate the haiku
