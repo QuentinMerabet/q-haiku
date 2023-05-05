@@ -3,11 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --font-title: "Playfair Display", serif;
-  --font-body: "Inter", sans-serif;
-}
-
 ::selection {
   background: rgba(0, 0, 0, 0.05);
   color: white;

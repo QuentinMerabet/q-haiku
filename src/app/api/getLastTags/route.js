@@ -8,9 +8,7 @@ export async function GET(request) {
       orderBy: { id: "desc" },
       take: 3,
     });
-    const response = NextResponse.json({ tags });
-    //response.headers.set("Cache-Control", "no-cache");
-    return response;
+    return NextResponse.json({ tags });
   } catch (err) {
     console.error(err);
   }
