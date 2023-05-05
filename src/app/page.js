@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 export const runtime = "nodejs"; // default
 export const preferredRegion = "home";
 export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
 
 export default async function Home() {
   return (
