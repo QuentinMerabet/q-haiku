@@ -56,20 +56,22 @@ export default function Form(props) {
       <HaikuCard tags={tags} haiku={haiku} />
       <a.form onSubmit={(e) => handleSubmit(e)} style={spring}>
         <label htmlFor="tagName">Drop a word to inspire the next Haiku.</label>
-        <input
-          type="text"
-          pattern="[a-zA-ZÀ-ÖØ-öø-ÿ]+"
-          placeholder="Sunflowers"
-          size={10}
-          maxLength={10}
-          minLength={2}
-          value={newTag}
-          onChange={handleChange}
-          disabled={loading}
-        />
-        <button type="submit" disabled={loading}>
-          ✳
-        </button>
+        <div className="relative w-fit mx-auto">
+          <input
+            type="text"
+            pattern="[a-zA-ZÀ-ÖØ-öø-ÿ]+"
+            placeholder="Sunflowers"
+            size={10}
+            maxLength={10}
+            minLength={2}
+            value={newTag}
+            onChange={handleChange}
+            disabled={loading}
+          />
+          <button type="submit" disabled={loading}>
+            <img width={18} height={18} src="ico-submit.svg" />
+          </button>
+        </div>
       </a.form>
     </>
   );
