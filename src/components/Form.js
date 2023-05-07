@@ -69,7 +69,7 @@ export default function Form(props) {
             disabled={loading}
           />
           <button type="submit" disabled={loading}>
-            <img width={18} height={18} src="ico-submit.svg" />
+            <img width={15} height={15} src="ico-submit.svg" />
           </button>
         </div>
       </a.form>
