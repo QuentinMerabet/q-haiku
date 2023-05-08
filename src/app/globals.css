@@ -59,7 +59,8 @@ aside {
   border: 1px solid rgba(0, 0, 0, 1);
 }
 
-.logo img {
+.logo img,
+.spinner img {
   animation: rotate 5s infinite linear;
 }
 

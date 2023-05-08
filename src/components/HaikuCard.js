@@ -4,6 +4,7 @@ import React, { useState, useMemo, useEffect, Suspense } from "react";
 import useSWR from "swr";
 import { useSpring, useTrail, a, config } from "@react-spring/web";
 import Share from "./Share";
+import Spinner from "./Spinner";
 
 export default function HaikuCard(props) {
   const { tags, haiku } = props;
@@ -129,5 +130,7 @@ export default function HaikuCard(props) {
         {Tags}
       </a.div>
     );
+  } else {
+    return <Spinner />;
   }
 }
